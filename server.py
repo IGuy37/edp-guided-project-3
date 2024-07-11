@@ -9,7 +9,8 @@ from sklearn.metrics import accuracy_score
 
 app = Flask(__name__)
 MODEL_FILENAME = "trained_model.pkl"
-model = pickle.load(MODEL_FILENAME)
+with open(MODEL_FILENAME, 'rb') as file:
+    model = pickle.load(file)
 
 def test_model(model, df):
     X_test = pd.get_dummies(df[['homeworld','unit_type']])
