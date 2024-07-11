@@ -17,6 +17,8 @@ def test_model(model: DecisionTreeClassifier, df: pd.DataFrame):
     X_test = pd.get_dummies(df[['homeworld','unit_type']])
     y_test=df['empire_or_resistance']
     predictions =  model.predict(X_test)
+    score = accuracy_score(y_test, predictions)
+    return score
 
 @app.route('/')
 def say_hello():
