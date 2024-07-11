@@ -25,8 +25,10 @@ def say_hello():
     return jsonify({"message" : "Hello, World!"})
 
 def main():
+    print("Loading data...")
     DATA_FILENAME = "troop_movements10m.parquet"
     df : pd.DataFrame = pq.read_pandas(DATA_FILENAME)
+    print("Done!")
     test_model(model, df)
     app.run()
 
