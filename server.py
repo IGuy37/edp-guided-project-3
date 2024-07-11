@@ -14,13 +14,6 @@ def say_hello():
     return jsonify({"message" : "Hello, World!"})
 
 def main():
-    print("Loading data...")
-    DATA_FILENAME = "troop_movements10m.parquet"
-    df : pd.DataFrame = pq.read_pandas(DATA_FILENAME)
-    print("Done!")
-    X_test = pd.get_dummies(df[['homeworld','unit_type']])
-    predictions =  model.predict(X_test)
-    df['predictions'] = predictions
     app.run()
 
 if(__name__ == "__main__"):  
