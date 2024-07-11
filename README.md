@@ -18,3 +18,8 @@ To generate the training data to use for the model, use the following command:
 python generate_data.py
 ```
 To create the model, open `ml_model.ipynb` in your text editor of choice and run all the cells. You may need a CSV file named `troop_movements10m.csv` if you want to test the model. It is not provided here because there are 10 million rows in the CSV provided to us and we want to respect your disk space.
+
+To see the predictions for the 10 million row CSV file, run
+```bash
+python predictions.py
+```
