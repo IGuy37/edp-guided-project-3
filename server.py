@@ -12,7 +12,7 @@ def main():
     df = pq.read_pandas(DATA_FILENAME)
     X_test = pd.get_dummies(df[['homeworld','unit_type']])
     y_test=df['empire_or_resistance']
-    model.predict()
+    #model.predict()
 
 
 
