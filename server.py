@@ -12,7 +12,6 @@ with open(MODEL_FILENAME, 'rb') as file:
 @app.route('/')
 def say_hello():
     return jsonify({"message" : "Hello, World!"})
-
 def main():
     app.run()
 
