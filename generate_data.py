@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timedelta
 import json
 
-# Generate data for 50 characters
+# Generate data for 1000 characters
 NUM_ROWS = 1000
 
 # Create the CSV file
